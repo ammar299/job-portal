@@ -1,0 +1,39 @@
+type Query {
+  flexhireData: User
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  avatarUrl: String
+  profile: Profile
+}
+
+type Profile {
+  id: ID!
+  slug: String!
+  totalExperience: Int!
+}
+
+type ContractConnection {
+  totalCount: Int!
+  nodes: [Contract]!
+}
+
+type Contract {
+  job: Job!
+}
+
+type Job {
+  rawId: ID!
+  title: String!
+  description: String!
+  status: String!
+}
+
+type Question {
+  rawId: ID!
+  title: String!
+  status: String!
+}
